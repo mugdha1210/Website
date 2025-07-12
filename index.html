@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tailwind Demo Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white p-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-4">
+      <H1><b>MyLogo</b></H1>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex space-x-6">
+      <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded">Home</a>
+      <a href="#" class="hover:bg-gray-700 px-3 py-2 rounded">About</a>
+
+      <!-- Dropdown -->
+      <div class="relative group">
+        <button class="hover:bg-gray-700 px-3 py-2 rounded inline-flex items-center">
+          Projects ▾
+        </button>
+        <div class="absolute left-0 mt-2 hidden group-hover:block bg-white text-black min-w-[160px] rounded shadow-lg z-10">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Project 1</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-100">Project 2</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative">
+    <img src="https://i.pinimg.com/736x/d0/42/84/d04284e492af64489199aab2cc8aaa9e.jpg" alt="Banner" class="w-full h-[400px] object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Our Platform</h1>
+      <p class="text-lg md:text-xl max-w-xl">Discover amazing products and extensions that enhance your workflow.</p>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="py-16 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-12">Featured Products</h2>
+
+    <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+
+      <!-- Product Card -->
+     
+<div class="group bg-white border border-gray-300 group-hover:border-blue-500 rounded-xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out transform p-6 flex flex-col items-start text-left cursor-pointer relative overflow-hidden">
+
+  <!-- Decorative Glow -->
+  <div class="absolute top-0 right-0 w-20 h-20 bg-blue-100 rounded-full blur-2xl opacity-0 group-hover:opacity-40 transition-all duration-500 pointer-events-none"></div>
+
+  <!-- Badge -->
+  <span class="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">New</span>
+
+  <!-- Image -->
+  <div class="relative w-20 h-20 mb-4 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+    <img src="https://cdn-icons-png.freepik.com/256/6537/6537379.png" alt="Product 1" class="w-full h-full object-contain">
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 transition-colors group-hover:text-blue-600 duration-300">Product 1</h3>
+
+  <!-- Description -->
+  <p class="text-gray-600 text-sm mb-6 group-hover:text-gray-800 transition-colors duration-300">
+    A brief description of product 1 that explains its key features and value.
+  </p>
+
+  <!-- CTA Button -->
+  <a href="https://example.com/product1" target="_blank" class="mt-auto inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:shadow-lg transition duration-300">
+    Learn More
+  </a>
+</div>
+
+
+<!-- Product 2 -->
+<div class="group bg-white border border-gray-300 group-hover:border-blue-500 rounded-xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out transform p-6 flex flex-col items-start text-left cursor-pointer relative overflow-hidden">
+  <!-- Decorative Glow -->
+  <div class="absolute top-0 right-0 w-20 h-20 bg-blue-100 rounded-full blur-2xl opacity-0 group-hover:opacity-40 transition-all duration-500 pointer-events-none"></div>
+
+  <!-- Image -->
+  <div class="relative w-20 h-20 mb-4 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+    <img src="https://www.creativefabrica.com/wp-content/uploads/2020/03/08/orange-book-in-circle-icon-Graphics-3393560-1.jpg" alt="Product 2" class="w-full h-full object-contain">
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 transition-colors group-hover:text-blue-600 duration-300">Product 2</h3>
+
+  <!-- Description -->
+  <p class="text-gray-600 text-sm mb-6 group-hover:text-gray-800 transition-colors duration-300">
+    A brief description of product 2 that explains its key features and value.
+  </p>
+
+  <!-- CTA Button -->
+  <a href="https://example.com/product2" target="_blank" class="mt-auto inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:shadow-lg transition duration-300">
+    Learn More
+  </a>
+</div>
+
+<!-- Product 3 -->
+<div class="group bg-white border border-gray-300 group-hover:border-blue-500 rounded-xl shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out transform p-6 flex flex-col items-start text-left cursor-pointer relative overflow-hidden">
+  <!-- Decorative Glow -->
+  <div class="absolute top-0 right-0 w-20 h-20 bg-blue-100 rounded-full blur-2xl opacity-0 group-hover:opacity-40 transition-all duration-500 pointer-events-none"></div>
+
+  <!-- Image -->
+  <div class="relative w-20 h-20 mb-4 transform transition-transform duration-300 group-hover:rotate-3 group-hover:scale-110">
+    <img src="https://cdn-icons-png.flaticon.com/512/2615/2615096.png" alt="Product 3" class="w-full h-full object-contain">
+  </div>
+
+  <!-- Title -->
+  <h3 class="text-xl font-semibold mb-2 text-gray-800 transition-colors group-hover:text-blue-600 duration-300">Product 3</h3>
+
+  <!-- Description -->
+  <p class="text-gray-600 text-sm mb-6 group-hover:text-gray-800 transition-colors duration-300">
+    A brief description of product 3 that explains its key features and value.
+  </p>
+
+  <!-- CTA Button -->
+  <a href="https://example.com/product3" target="_blank" class="mt-auto inline-block bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-5 py-2 rounded-full font-semibold shadow hover:shadow-lg transition duration-300">
+    Learn More
+  </a>
+</div>
+
+
+
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-blue-600 text-white py-16 text-center">
+    <h2 class="text-3xl font-bold mb-4">Join Our Community</h2>
+    <p class="mb-6 text-lg">Sign up today and start exploring the best tools available!</p>
+    <a href="https://example.com/signup" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+      Join Us
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+
+        <!-- Apps & Extensions -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Apps & Extensions</h2>
+          <ul>
+            <li><a href="#" class="hover:underline text-gray-300">iOS App</a></li>
+            <li><a href="#" class="hover:underline text-gray-300">Android App</a></li>
+            <li><a href="#" class="hover:underline text-gray-300">Browser Extension</a></li>
+          </ul>
+        </div>
+
+        <!-- Community -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Community</h2>
+          <ul>
+            <li><a href="#" class="hover:underline text-gray-300">Blog</a></li>
+            <li><a href="#" class="hover:underline text-gray-300">Forums</a></li>
+            <li><a href="#" class="hover:underline text-gray-300">Developer Hub</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h2 class="text-lg font-semibold mb-4">Contact Us</h2>
+          <ul>
+            <li><a href="mailto:support@example.com" class="hover:underline text-gray-300">Email Support</a></li>
+            <li><a href="#" class="hover:underline text-gray-300">Live Chat</a></li>
+            <li><a href="#" class="hover:underline text-gray-300">Help Center</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Social Icons -->
+      <div class="mt-8 flex justify-center space-x-6">
+        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white" aria-label="Facebook">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.
