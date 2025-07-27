@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listing Page - Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .image-banner {
+      background-image: url('https://img.freepik.com/premium-vector/modern-polygon-background_1035-11422.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 165px;
+      position: relative;
+    }
+    .image-overlay {
+      background-color: rgba(255, 255, 255, 0.4);
+      width: 100%;
+      height: 100%;
+    }
+    .thumbnail-box {
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .thumbnail-box.active {
+      border-color: #0d6efd;
+    }
+  </style>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Header -->
+  <header class="bg-dark text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h5 mb-0">MyLogo</h1>
+      <nav>
+        <a href="#" class="text-white me-3 text-decoration-none">Home</a>
+        <a href="#" class="text-white text-decoration-none">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Image Banner -->
+  <div class="image-banner">
+    <div class="image-overlay"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1 py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Carousel and Media -->
+        <div class="col-md-6">
+          <div id="mediaDisplay" class="mb-3">
+            <img src="https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp" class="w-100 img-fluid rounded" id="mainMedia" alt="Product">
+          </div>
+
+          <!-- Thumbnails -->
+          <div class="d-flex gap-2 overflow-auto">
+            <div class="thumbnail-box rounded" onclick="setMedia(0)">
+              <img src="https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp" class="img-fluid rounded">
+            </div>
+            <div class="thumbnail-box rounded" onclick="setMedia(1)">
+              <img src="https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp" class="img-fluid rounded">
+            </div>
+            <div class="thumbnail-box rounded" onclick="setMedia(2)">
+              <img src="https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp" class="img-fluid rounded">
+            </div>
+            <div class="thumbnail-box rounded d-flex align-items-center justify-content-center bg-dark text-white" onclick="setMedia(3)">
+              ▶ Video
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+          <h2 class="text-primary mb-4">Product Name</h2>
+
+          <div class="bg-white p-4 rounded shadow-sm mb-4">
+            <h5 class="text-dark text-decoration-underline">About This Product</h5>
+            <p class="text-muted">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repudiandae explicabo pariatur laboriosam debitis ratione id assumenda ullam soluta deserunt ut eveniet a impedit nostrum...
+            </p>
+          </div>
+
+          <div class="bg-white p-4 rounded shadow-sm">
+            <h5 class="text-dark text-decoration-underline">Key Features</h5>
+            <ul class="list-unstyled ps-3">
+              <li>High-quality material</li>
+              <li>Easy to use</li>
+              <li>Available in multiple sizes</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 mt-auto">
+    <div class="container">
+      <div class="row text-sm">
+        <div class="col-md-4">
+          <h6>Apps & Extensions</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">iOS App</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Android App</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Browser Extension</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Community</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Forums</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Developer Hub</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Contact Us</h6>
+          <ul class="list-unstyled">
+            <li><a href="mailto:support@example.com" class="text-light text-decoration-none">Email Support</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Live Chat</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Help Center</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const media = [
+      { type: 'image', src: 'https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp' },
+      { type: 'image', src: 'https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp' },
+      { type: 'image', src: 'https://welpix.com/wp-content/uploads/2024/06/A-guide-to-skincare-product-photography.webp' },
+      { type: 'video', src: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
+    ];
+
+    function setMedia(index) {
+      const display = document.getElementById('mediaDisplay');
+      const main = document.getElementById('mainMedia');
+      if (media[index].type === 'image') {
+        display.innerHTML = `<img src="${media[index].src}" class="w-100 img-fluid rounded" id="mainMedia" alt="Product">`;
+      } else {
+        display.innerHTML = `<iframe class="w-100 rounded" height="400" src="${media[index].src}" allowfullscreen></iframe>`;
+      }
+
+      document.querySelectorAll('.thumbnail-box').forEach((box, i) => {
+        box.classList.toggle('active', i === index);
+      });
+    }
+  </script>
+</body>
+</html>
